@@ -1,0 +1,54 @@
+.button {
+    @apply py-2 px-4 cursor-pointer font-semibold text-center rounded-full hover:opacity-70
+}
+
+.button-success {
+    @apply bg-primary text-white
+}
+
+.button-danger {
+    @apply bg-danger text-white
+}
+
+.button-ghost {
+    @apply button border border-primary text-primary
+}
+
+.button-disabled {
+    @apply bg-[#f6f6f6] text-[#dddcdc] py-2 px-4 font-semibold text-center rounded-full
+}
+
+.input-container {
+    @apply border-0 flex relative flex-col
+}
+
+.input {
+    @apply text-xl bg-transparent mt-4 border-0 text-lg border-b border-inputBorder w-full text-inputBorder focus:text-textPrimary focus:border-textPrimary
+}
+
+.input-error .input {
+    @apply border-b-danger text-danger
+}
+
+.input-label {
+    transform-origin: left;
+    transition: all 0.3s ease;
+    @apply absolute top-5 text-inputBorder
+}
+
+.input-error .input-label {
+    color: #eb4a46 !important;
+}
+
+.input:focus ~ .input-label {
+    color: #333333;
+}
+
+.input-label-animate {
+    top: 0;
+    transform: scale(0.8, 0.8);
+}
+
+input:focus {
+    outline: none;
+}

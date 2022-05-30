@@ -1,0 +1,7 @@
+.menu-bg {
+    @apply bg-primary rounded-full cursor-pointer shadow-xl
+}
+
+.menu-row {
+    @apply mt-3 py-1 px-2 text-white text-center font-semibold text-lg flex-row
+}

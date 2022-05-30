@@ -6,9 +6,23 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.4.7",
+    "axios": "^0.27.2",
+    "dexie": "^3.2.2",
+    "dexie-react-hooks": "^1.1.1",
+    "framer-motion": "^6.3.4",
+    "js-brasil": "^2.5.3",
+    "lodash": "^4.17.21",
+    "lottie-react": "^2.2.1",
+    "postcss": "^8.4.14",
+    "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1",
+    "react-router-dom": "6",
     "react-scripts": "5.0.1",
+    "reoverlay": "^1.0.3",
+    "tailwindcss": "^3.0.24",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "jest-canvas-mock": "^2.4.0"
   }
 }
