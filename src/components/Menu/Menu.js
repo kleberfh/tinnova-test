@@ -20,6 +20,7 @@ export default function Menu({ pressAction }) {
 
   return (
     <div
+      data-testid={"menu"}
       onClick={handleClick}
       className={"ml-auto w-fit menu-bg p-1"}
     >

@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "indexeddbshim": "^10.0.0",
     "jest-canvas-mock": "^2.4.0"
   }
 }

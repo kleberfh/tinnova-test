@@ -22,11 +22,10 @@ export default function Users() {
     try {
       const result = await deleteUser(id);
       if (result.status === 'error') {
-        console.log('Erro ao exluir usuario:', result.message);
-        return;
+        console.error('Erro ao exluir usuario:', result.message);
       }
     } catch (e) {
-      console.log(e)
+      console.error(e)
     }
   }
 

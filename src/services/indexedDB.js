@@ -18,7 +18,14 @@ export const initializeDB = async () => {
   }
 }
 
-export const listUsers = async () => await db.users.toArray();
+export const listUsers = async () => {
+  try {
+    return await db.users.toArray()
+  } catch (e) {
+    console.error(e);
+    return [];
+  }
+};
 
 export const getUser = async (id) => {
   try {
@@ -26,10 +33,10 @@ export const getUser = async (id) => {
       status: 'successo',
       data: await db.users.get((Number(id)))
     }
-  } catch (error) {
+  } catch (e) {
     return {
       status: 'error',
-      message: `Falha buscar usuário: ${error}`
+      message: e
     }
   }
 }
@@ -37,15 +44,14 @@ export const getUser = async (id) => {
 export const addUser = async (user) => {
   try {
     await db.users.add(user);
-
     return {
       status: 'success',
       message: `Usuário ${user.name} criado com sucesso.`
     }
-  } catch (error) {
+  } catch (e) {
     return {
       status: 'error',
-      message: `Falha ao criar ${user.name}: ${error}`
+      message: e
     }
   }
 }
@@ -59,9 +65,10 @@ export const bulkAddUser = async (users) => {
       message: `Usuários salvos com sucesso.`
     }
   } catch (error) {
+    console.error(error);
     return {
       status: 'error',
-      message: `Erro ao salvar usuários: ${error}`
+      message: error
     }
   }
 };
@@ -75,9 +82,10 @@ export const updateUser = async (user) => {
       message: `Usuário ${user.name} alterado com sucesso.`
     }
   } catch (error) {
+    console.error(error);
     return {
       status: 'error',
-      message: `Falha ao alterar ${user.name}: ${error}`
+      message: error
     }
   }
 }
@@ -93,7 +101,7 @@ export const deleteUser = async (id) => {
   } catch (error) {
     return {
       status: 'error',
-      message: `Falha ao exluir usuário: ${error}`
+      message: error
     }
   }
 }

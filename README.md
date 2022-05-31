@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Teste Tinnova
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma simples aplicação que possui apenas duas páginas, sendo a primeira para a criação e edição
+de usuários, e a segunda para a listagem, visualização e exclusão dos usuários criados.
 
-## Available Scripts
+O projeto utiliza do IndexedDB como seu "Banco de dados" local para armezenar e gerenciar os dados de cada usuário cadastrado.
 
-In the project directory, you can run:
+## Instalar dependencias
 
-### `npm start`
+Para executar este projeto é necessário ter [NodeJS](https://nodejs.org/en/) e [NPM](https://www.npmjs.com/) instalados locamente em sua máquina.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+para fazer a instalação das dependencias do projeto basta rodar:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```shell
+npm i
+```
+#### ou para yarn
+```shell
+yarn
+```
 
-### `npm test`
+## Ferramentas utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Algumas bibliotecas foram utilizadas para a composição deste projeto, segue abaixo a lista com cada uma e sua função neste projeto.
 
-### `npm run build`
+- *Axios*: Criar instancias e realizar chamadas para API REST.
+- *Dexie*: Utilização mais prática e simples do IndexedDB.
+- *Dexie React Hooks*: Ferramentas extras intregradas com o React para o Dexie.
+- *Framer Motion*: Criar animações complexas de forma mais prática e rápida no React.
+- *JS Brasil*: Máscaras e validações de documentos e números no padrão brasileiro.
+- *Lodash*: Biblioteca de utilitários para trabalhar de forma mais prática com objetos e coleções de objetos.
+- *Lottie React*: Renderizar JSON de animações no React (A animação no menu deste projeto é feita com lottie).
+- *Prop Types*: Ferramenta para adicionar tipagem nos componentes deste projeto.
+- *Reoverlay*: Utilizado para a criação das modais deste projeto, ajuda a ter um melhor controle e gerenciamento de cada modal.
+- *Tailwind CSS*: Framework CSS para criar estilos responsivos com mais práticidade.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Dependencias de desenvolvimento:
+- *IndexedDB Shim*: Fornece um "Mock" do IndexedDB para ser utilizado nos testes desta aplicação.
+- *Jest Canvas Mock*: Renderiza as animações do Lottie em um canvas, utilizado também para os testes desta aplicação.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Rodar o projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para rodar este projeto localmente, basta rodar um dos comando abaixo **após fazer a instalação das dependencias.**
 
-### `npm run eject`
+```shell
+npm run start
+```
+ou com yarn:
+```shell
+yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Testes
+Este projeto possui testes de componentes e integrações, para executa-los, basta rodar o comando:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```shell
+npm run test
+```
+ou com yarn:
+```shell
+yarn test
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Desenvolvedor
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Esté projeto foi desenvolvido e desenhado por [Kleber Fernando](https://www.linkedin.com/in/kleber-fernando/) com base nas instruções fornecidas.

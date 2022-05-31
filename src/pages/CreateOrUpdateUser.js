@@ -29,15 +29,19 @@ export default function CreateOrUpdateUser(){
   }
 
   const getUserDatails = async () => {
-    const { data } = await getUser(id);
-    if (data) {
-      setName(data.name);
-      setCpf(maskBr.cpf(data.cpf));
-      setPhone(maskBr.telefone(data.phone));
-      setEmail(data.email);
-      setValidFields(['name', 'cpf', 'phone', 'email']);
-    } else {
-      setId(null);
+    try {
+      const { data } = await getUser(id);
+      if (data) {
+        setName(data.name);
+        setCpf(maskBr.cpf(data.cpf));
+        setPhone(maskBr.telefone(data.phone));
+        setEmail(data.email);
+        setValidFields(['name', 'cpf', 'phone', 'email']);
+      } else {
+        setId(null);
+      }
+    } catch (e) {
+      console.error(e);
     }
   }
 
@@ -72,12 +76,13 @@ export default function CreateOrUpdateUser(){
     } catch (e) {
       showError(e);
       setLoading(false);
+      console.error(e);
     }
   }
 
-  const handleSubmit = async () => {
+  const handleSubmit = () => {
     setLoading(true);
-    await createOrUpdateUser();
+    createOrUpdateUser();
   }
 
   const handleValidaiton = (field, validation) => {

@@ -12,7 +12,7 @@ export default function MenuController() {
   }
 
   return(
-    <div id={"menu"} className={"absolute right-4 top-4 lg:right-8 lg:top-8 flex-col items-end"}>
+    <div className={"absolute right-4 top-4 lg:right-8 lg:top-8 flex-col items-end"}>
       <Menu pressAction={handleMenuChange} />
       <AnimatePresence>
         {open && (
@@ -33,7 +33,7 @@ export default function MenuController() {
               exit={{ y: -10 }}
               className={"menu-bg menu-row"}
             >
-              <Link to={'/'}>
+              <Link to={'/'} data-testid={'new_user_link'}>
                 Novo usuário
               </Link>
             </motion.div>
@@ -43,7 +43,7 @@ export default function MenuController() {
               exit={{ y: -10 }}
               className={"menu-bg menu-row"}
             >
-              <Link to={'/usuarios'}>
+              <Link to={'/usuarios'} data-testid={'users_link'}>
                 Usuários
               </Link>
             </motion.div>
